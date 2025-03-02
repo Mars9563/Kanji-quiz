@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center fw-bold">Kanji Quiz</h1>
+
+        <!-- Quiz Settings -->
+        <div class="card p-4 shadow">
+            <label for="levelSelect" class="form-label fw-semibold">Select JLPT Level:</label>
+            <select id="levelSelect" class="form-select mb-3">
+                <option value="N5N4">N5 + N4</option>
+                <option value="N3">N3</option>
+                <option value="N2">N2</option>
+                <option value="N1">N1</option>
+            </select>
+
+            <label for="questionCount" class="form-label fw-semibold">Number of Questions:</label>
+            <input type="number" id="questionCount" class="form-control mb-3" min="1" max="20" value="5">
+
+            <button id="startQuiz" class="btn btn-primary w-100">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div id="quizContainer" class="mt-4"></div>
+
+        <!-- Submit Button -->
+        <button id="submitQuiz" class="btn btn-success mt-3 w-100" style="display:none;">Submit</button>
+
+        <div id="result" class="mt-3 text-center fw-bold"></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
